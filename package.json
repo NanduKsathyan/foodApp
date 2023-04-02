@@ -1,4 +1,5 @@
 {
+  "homepage": "http://NanduKsathyan.github.io/foodApp",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "react": "^18.2.0",
@@ -8,9 +9,9 @@
   },
   "name": "foodapp",
   "version": "1.0.0",
-  "main": "index.js",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
+    "gh-pages": "^5.0.0",
     "parcel": "^2.8.3",
     "postcss": "^8.4.21",
     "process": "^0.11.10",
@@ -18,6 +19,9 @@
   },
   "scripts": {
     "start": "parcel index.html",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build",
+    "build": "parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Nandu",
